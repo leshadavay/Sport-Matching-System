@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//WebContent/header.jsp=UTF-8
+encoding//src/CreateServlet.java=UTF-8
+encoding//src/LoginServlet.java=UTF-8
+encoding//src/PartInServlet.java=UTF-8
+encoding//src/UserModel/UserDao.java=UTF-8

@@ -1,0 +1,114 @@
+#slide-page-container #img-rad1,#img-rad2,#img-rad3,#img-rad4{
+    display: none;
+}
+
+#slide-page-container{
+    margin: 0 auto;
+ 
+    position: relative;
+    width: 95%;
+    height: 700px;
+    padding-bottom: 38%;
+    user-select: none;
+    background: #4c4c4c;
+    border: solid 10px #2c2c2c;
+    border-radius:10px ;
+    z-index: 10;
+}
+.slide-images{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	
+}
+.slide-images img{
+    width: inherit;
+    height: inherit;
+    object-fit: contain;
+}
+
+.previous,    .next{
+    width: 11%;
+    height: inherit;
+    position: absolute;
+    top:0;
+    background: rgba(255,255,255,.1);
+    color:rgba(244, 244, 244,.9);
+    z-index: 99;
+    cursor: pointer;
+    text-align: center;
+
+}
+#slide-page-container .previous{
+    left: 0;
+}
+#slide-page-container .next{
+    right: 0;
+}
+#slide-page-container .previous:hover,   #slide-page-container .next:hover{
+    transition: .3s;
+    background-color: rgba(88, 88, 89,.6);
+    color: #ffffff;
+}
+#slide-navigation{
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+#slide-navigation .dots {
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(0,0,0,.6);
+}
+#slide-navigation .dots:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: .25s
+}
+.slide-images{
+    z-index: -1;
+}
+#img-rad1:checked ~ #slide-page1  ,
+#img-rad2:checked ~ #slide-page2  ,
+#img-rad3:checked ~ #slide-page3,
+#img-rad4:checked ~ #slide-page4
+{z-index: 9; position:absolute; animation: fade 1s ease-in-out;}
+
+#img-rad1:checked ~ #slide-navigation > #dot1,
+#img-rad2:checked ~ #slide-navigation #dot2,
+#img-rad3:checked ~ #slide-navigation #dot3,
+#img-rad4:checked ~ #slide-navigation #dot4
+{ background-color: rgba(255,255,255,.9);}
+
+@keyframes fade{
+    0%{opacity:0.8;
+        transform: scale(1);}
+
+    40%{
+        opacity:0.6;
+        transform: scale(0.9);
+    }
+    100%{opacity:1;
+        transform: scale(1);}
+}
+
+#nav_slide .dots{
+    width: 12px;
+    height: 12px;
+}
+#slide-page-container label span {
+    font-size: 50pt;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

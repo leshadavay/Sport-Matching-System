@@ -1,0 +1,74 @@
+#animated_text {
+ 
+    height:70px;       text-align: center;    background: transparent;
+  background-attachment: fixed;
+  overflow:hidden; 
+  
+}
+#animate-container{  width:100%;    }
+.letter-1{
+    overflow:hidden;    font-weight:bolder;    font-size:40px;    animation-name: fadeInLeft;
+    animation-duration:17s;    animation-iteration-count:infinite;    margin-top:-10px;
+    background: linear-gradient(#eee, #333);    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    font-family: 'Orbitron', sans-serif;
+}
+.letter-2{
+    overflow:hidden;    margin-top:-20px;   font-weight:bolder;    font-size:25px;
+    animation-name:fadeInRight;    animation-iteration-count:infinite;
+    animation-duration: 17s;    background: linear-gradient(#eee, #333);
+    -webkit-background-clip: text;    -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', sans-serif;
+}
+.letter-3{
+    overflow:hidden;    font-weight:normal;    font-size:60px;    animation-name: zoomIn;
+    animation-duration:17s;    animation-delay:4s;    color:#7af2f6;
+    animation-iteration-count:infinite;    margin-top:-90px;    opacity:0;
+    font-family: 'Barlow Condensed', sans-serif;   background: linear-gradient(#ffa564, #333);
+    -webkit-background-clip: text;    -webkit-text-fill-color: transparent;
+   letter-spacing:5px;
+ 
+}
+.letter-4{
+    overflow:hidden;    font-weight:normal;    font-size:60px;    animation-name: zoomIn;
+    animation-duration:17s;    animation-delay:8.5s;    color:#7af2f6;
+    animation-iteration-count:infinite;    margin-top:-90px;    opacity:0;
+    font-family: 'Barlow Condensed', sans-serif;    background: linear-gradient(#7af2f6, #333);
+    -webkit-background-clip: text;    -webkit-text-fill-color: transparent;
+	 letter-spacing:5px;
+}
+.letter-5{
+    padding-top:10px;    font-weight:bolder;    font-size:60px;    animation-name:flash;
+    animation-iteration-count:infinite;    animation-duration: 17s;    color:#f66f6f;
+    animation-fill-mode:forwards;    margin-top:-90px;    text-align:center;    opacity:0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.fadeInLeft {  animation-name: fadeInLeft;}
+.fadeInRight {  animation-name: fadeInRight;}
+.zoomIn {  animation-name: zoomIn;  animation-duration:2s;}
+.flash {  animation-name: flash;}
+
+@keyframes fadeInLeft {
+    0% { opacity: 0;   transform: translate3d(-60%, 0, 0); }
+    25% { opacity: 1;  transform: none; }
+    50%{ opacity: 0;  transition-delay:2s;  }
+    55%{ opacity:0;   transform: translate3d(60%, 0, 0);  }
+    100%{ opacity: 0;  }
+}
+@keyframes fadeInRight {
+    0% { opacity: 0;   transform: translate3d(60%, 0, 0);  }
+    25% { opacity: 1;  transform: none;  }
+    50%{ opacity: 0;   transition-delay:2s;  }
+    55%{ opacity:0;   transform: translate3d(-60%, 0, 0);  }
+    100%{ opacity: 0;  }
+}
+@keyframes zoomIn {
+    0% { opacity: 0;   transform: scale3d(.2, .2, .2);  }
+    30% { opacity: 1;  transform:none;  }
+    35%{ opacity:0;   transform: scale3d(3, 3, 3);  }
+    100%{ opacity:0;   transform:none;  }
+}
+@keyframes flash {
+    from{  opacity:0;  }
+    80%,84%{ opacity: 0; }
+    82%,90%, 100%{  opacity:1;   transform:none; }
+}

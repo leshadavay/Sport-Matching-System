@@ -1,0 +1,132 @@
+
+#cal-container{
+    width: 95%;
+    height:auto;
+    position: absolute;
+    background-color: white;
+    padding-bottom: 40px;
+}
+#title{
+	padding:20px;
+	text-align:center;
+}
+#cal-title-h3{
+    display: inline;
+    color: #0094ff;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 28px;
+}
+#cal-container caption h3{
+	text-align:center;	
+	}
+#cal-container caption a{
+	text-align:center;		
+    font-size: 15px;
+    text-decoration: none;
+    font-family: Montserrat;
+}
+#cal-container caption a:visited,caption a:visited{
+    color:black;
+}
+#cal-container caption a:hover{
+    color:red;
+}
+#cal-container table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height:100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+	bottom:-100px;
+
+}
+#cal-container thead{
+    text-align: center;
+    border: 3px solid black;
+    background-color: #3e3d3d;
+    color: #dfe1db;
+    font-family:'Julius Sans One', sans-serif;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+#cal-container th:nth-child(1n+6){
+    color:red;
+}
+#cal-container thead th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+#cal-container tbody{
+    height:100%;
+}
+#cal-container td{
+    margin-top: -50px;
+    border: 1px solid black;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    width: 6em;
+    height:5em;
+}
+#cal-container td:nth-child(1n+6){ /* pretty cool trick huh? */
+    color:red;
+}
+#cell-days-no-event,#cell-days-with-event {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#cell-days-no-event > div, #cell-days-with-event > div {
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+    width: 100%;
+    height: 100%;
+
+}
+#cell-days-no-event:hover{
+    cursor: pointer;
+    background: rgb(93, 225, 250) url("../resource/icon_add.png")no-repeat center;
+
+    background-size: 25px 25px;
+    border-radius: 5px;
+}
+#events:hover{
+    cursor: pointer;
+    background:  #ff605b url("../resource/icon_remove.png")no-repeat center;
+
+    background-size: 20px 20px;
+    color:transparent;
+
+}
+
+#today{
+    display: inline;
+    padding: 2px;
+    margin: -3px;
+    background-color: #4c4c4c;
+    color:white;
+    border-radius: 50px;
+}
+#events{
+    text-align: center;
+    word-wrap: break-word;
+    background: #2b542c;
+    border-radius: 10px;
+    color: #f5f2d6;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 2px;
+    margin-left: -3px;
+    margin-right: 3px;
+    font-family: "Malgun Gothic";
+    font-weight: normal;
+    font-size: 13px;
+}
+#caption-today{
+	right:30px;
+	position:absolute;
+    margin-top: 10px;
+    float:right;
+}
